@@ -27,7 +27,7 @@ public class MainFrame extends JFrame implements ActionListener{
         text1.setBounds(10,10,200,50);
         text1.setOpaque(true);
         text1.setBackground(Color.CYAN);
-        text1.setFont(new Font("jokerman", Font.PLAIN,20));//Font(x, y, z) y==1 negrita, y==2 cursiva
+        text1.setFont(new Font("Arial", Font.PLAIN,20));//Font(x, y, z) y==1 negrita, y==2 cursiva
         moneyBox.add(text1);
 
         ImageIcon image = new ImageIcon("ok2.png");
