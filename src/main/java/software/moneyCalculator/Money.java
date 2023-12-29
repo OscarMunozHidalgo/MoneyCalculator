@@ -24,4 +24,9 @@ public class Money{
     public void setCurrency(Currency currency) {
         this.currency = currency;
     }
+
+    @Override
+    public String toString() {
+        return quantity + " " + currency.letterCode();
+    }
 }

@@ -27,34 +27,20 @@ public class FixerApiCurrencyLoader implements CurrencyLoader {
         }catch (IOException e){
             return null;
         }
-        /*InputStream stream = url.openStream();
-        String data = new String(stream.readAllBytes());
-        System.out.println(data.lines().map(this::toCurrency).collect(toList()));
-        System.out.println(url.openStream().read());
-        return null;*/
-
     }
 
     private List<Currency> load(BufferedReader reader) {
-        //return reader.lines().takeWhile(s -> s.length()>3).map(this::toCurrency).collect(toList());
         return reader.lines().skip(10).filter(s->!s.contains("}")).map(this::toCurrency).collect(toList());
-        //return reader.lines().skip(10).map(this::toCurrency).dropWhile(s->s == null).collect(toList());
-        //return reader.lines().skip(10).map(this::toCurrency).collect(toList());
     }
 
     private Currency toCurrency(String s) {
         return toCurrency(s.split(":"));
-        /*String cleanString = s.replace("{","").replace("}","");
-
-        return toCurrency(cleanString.split(":"));
-
-         */
     }
 
     private Currency toCurrency(String[] data) {
         if (data.length != 2) return null;
         return new Currency(
-                data[0].replace("\"",""),
+                data[0].replace("\"","").trim(),
                 Double.parseDouble(data[1].replace(",",""))
         );
 
