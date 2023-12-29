@@ -1,5 +1,4 @@
 package software.moneyCalculator;
 
-public enum Currency {
-    EUR,DOL,PES
+public record Currency (String letterCode, double exchangeRate){
 }

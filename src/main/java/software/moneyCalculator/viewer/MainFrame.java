@@ -1,4 +1,4 @@
-package software.moneyCalculator;
+package software.moneyCalculator.viewer;
 
 import javax.swing.*;
 import java.awt.*;
