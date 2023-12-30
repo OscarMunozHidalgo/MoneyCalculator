@@ -1,4 +1,4 @@
-package software.moneyCalculator;
+package software.moneyCalculator.model;
 
 public record Currency (String letterCode, double exchangeRate){
 }

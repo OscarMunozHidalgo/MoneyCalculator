@@ -1,4 +1,7 @@
-package software.moneyCalculator;
+package software.moneyCalculator.controller;
+
+import software.moneyCalculator.model.Currency;
+import software.moneyCalculator.model.Money;
 
 public class MoneyConverterCommand implements Command{
 

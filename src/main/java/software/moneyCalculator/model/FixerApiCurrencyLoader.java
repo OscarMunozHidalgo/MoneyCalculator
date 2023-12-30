@@ -1,6 +1,4 @@
-package software.moneyCalculator;
-
-import software.moneyCalculator.CurrencyLoader;
+package software.moneyCalculator.model;
 
 import java.io.*;
 import java.net.MalformedURLException;

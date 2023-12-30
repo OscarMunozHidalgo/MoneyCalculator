@@ -1,4 +1,6 @@
-package software.moneyCalculator;
+package software.moneyCalculator.model;
+
+import software.moneyCalculator.model.Currency;
 
 import java.io.IOException;
 import java.util.List;
