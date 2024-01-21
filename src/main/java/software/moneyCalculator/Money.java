@@ -1,6 +1,4 @@
-package software.moneyCalculator.model;
-
-import software.moneyCalculator.model.Currency;
+package software.moneyCalculator;
 
 public class Money{
     private double quantity;

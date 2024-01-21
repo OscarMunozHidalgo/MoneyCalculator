@@ -1,7 +1,6 @@
-package software.moneyCalculator.controller;
+package software.moneyCalculator;
 
-import software.moneyCalculator.model.Currency;
-import software.moneyCalculator.model.Money;
+import java.text.DecimalFormat;
 
 public class MoneyConverterCommand implements Command{
 
@@ -14,7 +13,12 @@ public class MoneyConverterCommand implements Command{
     }
 
     public String execute(){
-        return convert().toString();
+        double result = convert().getQuantity();
+        if(result <= 999999999) {
+            DecimalFormat numberFormat = new DecimalFormat("#0.00");
+            return numberFormat.format(result);
+        }
+        return String.format("%6.2e", result);
     }
 
     public Money convert(){
